@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - QLBanHang</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container-shell nav-shell">
+            <a class="brand-link" asp-area="" asp-controller="Products" asp-action="Index">QLBanHang</a>
+            <nav class="primary-nav">
+                <a asp-area="" asp-controller="Products" asp-action="Index">Sản phẩm</a>
+                <a asp-area="" asp-controller="Category" asp-action="Index">Danh mục</a>
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </nav>
+            <partial name="_LoginPartial" />
+        </div>
+    </header>
+
+    <main role="main" class="container-shell page-shell">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-shell footer-shell">
+            <span>&copy; 2026 - QLBanHang</span>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

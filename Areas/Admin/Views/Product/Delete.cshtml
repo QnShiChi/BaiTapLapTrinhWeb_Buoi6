@@ -1,0 +1,14 @@
+@model Product
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+
+<section class="form-page">
+    <div class="form-card danger-card">
+        <h1>Xóa sản phẩm</h1>
+        <p>Bạn có chắc muốn xóa <strong>@Model.Name</strong>?</p>
+        <form method="post">
+            <button type="submit" class="button-danger">Xác nhận xóa</button>
+        </form>
+    </div>
+</section>

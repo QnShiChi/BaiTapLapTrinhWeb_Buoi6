@@ -1,0 +1,23 @@
+@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Danh mục";
+}
+
+<section class="simple-list-page">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Category Directory</p>
+            <h1>Danh mục sản phẩm</h1>
+        </div>
+    </div>
+    <div class="simple-card-grid">
+        @foreach (var category in Model)
+        {
+            <article class="simple-card">
+                <h3>@category.Name</h3>
+                <p>@(string.IsNullOrWhiteSpace(category.Description) ? "Chưa có mô tả." : category.Description)</p>
+                <a asp-controller="Products" asp-action="Category" asp-route-categoryId="@category.Id" class="button-secondary">Xem sản phẩm</a>
+            </article>
+        }
+    </div>
+</section>

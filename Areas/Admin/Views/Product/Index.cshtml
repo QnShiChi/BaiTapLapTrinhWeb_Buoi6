@@ -1,0 +1,41 @@
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Quản lý sản phẩm";
+}
+
+<section class="admin-page">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Admin</p>
+            <h1>Quản lý sản phẩm</h1>
+        </div>
+        <a asp-action="Create" class="button-primary">Thêm sản phẩm</a>
+    </div>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Danh mục</th>
+                <th>Giá</th>
+                <th>Số ảnh</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Category?.Name</td>
+                <td>@product.Price.ToString("N0") VND</td>
+                <td>@product.ProductImages.Count</td>
+                <td class="admin-actions">
+                    <a asp-action="Details" asp-route-id="@product.Id">Chi tiết</a>
+                    <a asp-action="Edit" asp-route-id="@product.Id">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@product.Id" class="text-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</section>

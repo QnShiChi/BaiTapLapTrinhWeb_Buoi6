@@ -1,0 +1,16 @@
+@model Category
+@{
+    ViewData["Title"] = "Xóa danh mục";
+}
+
+<section class="form-page">
+    <div class="form-card danger-card">
+        <h1>Xóa danh mục</h1>
+        <p>Bạn sắp xóa <strong>@Model.Name</strong>.</p>
+        <p>Tất cả sản phẩm thuộc danh mục này cũng sẽ bị xóa.</p>
+        <p><strong>Số sản phẩm bị ảnh hưởng:</strong> @Model.Products.Count</p>
+        <form method="post">
+            <button type="submit" class="button-danger">Xác nhận xóa</button>
+        </form>
+    </div>
+</section>

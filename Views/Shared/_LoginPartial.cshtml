@@ -1,0 +1,23 @@
+@using BaiTapWeb_Buoi5.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div class="nav-auth-links">
+@if (SignInManager.IsSignedIn(User))
+{
+    <span class="user-chip">@User.Identity?.Name</span>
+    @if (User.IsInRole("Admin"))
+    {
+        <a asp-area="Admin" asp-controller="Product" asp-action="Index">Admin</a>
+    }
+    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Products", new { area = "" })" method="post">
+        <button type="submit" class="button-link">Đăng xuất</button>
+    </form>
+}
+else
+{
+    <a asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
+    <a asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
+}
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin QLBanHang</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="top-nav admin-nav">
+        <div class="container-shell nav-shell">
+            <a class="brand-link" asp-area="Admin" asp-controller="Product" asp-action="Index">Admin Panel</a>
+            <nav class="primary-nav">
+                <a asp-area="Admin" asp-controller="Product" asp-action="Index">Sản phẩm</a>
+                <a asp-area="Admin" asp-controller="Category" asp-action="Index">Danh mục</a>
+                <a asp-area="" asp-controller="Products" asp-action="Index">Trang người dùng</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-shell page-shell">
+        @RenderBody()
+    </main>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

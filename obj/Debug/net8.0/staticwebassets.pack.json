@@ -1,0 +1,289 @@
+{
+  "Files": [
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/Content/ImagesBook/29ced1e3-0445-41e4-95ac-0d95d0f724c2_Screenshot from 2026-04-11 13-32-29.png",
+      "PackagePath": "staticwebassets/Content/ImagesBook/29ced1e3-0445-41e4-95ac-0d95d0f724c2_Screenshot from 2026-04-11 13-32-29.png"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/Content/ImagesBook/52464692-35f8-433a-b540-fbc6a6b55769_Screenshot from 2026-04-15 13-51-07.png",
+      "PackagePath": "staticwebassets/Content/ImagesBook/52464692-35f8-433a-b540-fbc6a6b55769_Screenshot from 2026-04-15 13-51-07.png"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/Content/ImagesBook/8af151f1-fa29-4d2c-9f29-2c0ab70d3547_java-fundamentals.svg",
+      "PackagePath": "staticwebassets/Content/ImagesBook/8af151f1-fa29-4d2c-9f29-2c0ab70d3547_java-fundamentals.svg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/Content/ImagesBook/cho-toi-xin-mot-ve-di-tuoi-tho.svg",
+      "PackagePath": "staticwebassets/Content/ImagesBook/cho-toi-xin-mot-ve-di-tuoi-tho.svg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/Content/ImagesBook/cuoc-song-rat-giong-cuoc-doi.svg",
+      "PackagePath": "staticwebassets/Content/ImagesBook/cuoc-song-rat-giong-cuoc-doi.svg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/Content/ImagesBook/java-fundamentals.svg",
+      "PackagePath": "staticwebassets/Content/ImagesBook/java-fundamentals.svg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/Content/ImagesBook/lap-trinh-csharp.svg",
+      "PackagePath": "staticwebassets/Content/ImagesBook/lap-trinh-csharp.svg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BaiTapWeb_Buoi5.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BaiTapWeb_Buoi5.props",
+      "PackagePath": "build\\BaiTapWeb_Buoi5.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BaiTapWeb_Buoi5.props",
+      "PackagePath": "buildMultiTargeting\\BaiTapWeb_Buoi5.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BaiTapWeb_Buoi5.props",
+      "PackagePath": "buildTransitive\\BaiTapWeb_Buoi5.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

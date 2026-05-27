@@ -1,0 +1,29 @@
+@model ProductDetailsViewModel
+@{
+    ViewData["Title"] = Model.Product.Name;
+    var primaryImage = Model.Product.ProductImages.FirstOrDefault(image => image.IsPrimary)?.ImageUrl
+        ?? Model.Product.ProductImages.FirstOrDefault()?.ImageUrl;
+}
+
+<section class="product-detail">
+    <div class="product-gallery">
+        @if (!string.IsNullOrWhiteSpace(primaryImage))
+        {
+            <img src="~/@primaryImage" alt="@Model.Product.Name" class="product-detail-primary-image" />
+        }
+
+        <div class="product-thumbnail-grid">
+            @foreach (var image in Model.Product.ProductImages)
+            {
+                <img src="~/@image.ImageUrl" alt="@Model.Product.Name" class="product-thumbnail" />
+            }
+        </div>
+    </div>
+
+    <div class="product-info-card">
+        <p class="eyebrow">@Model.Product.Category?.Name</p>
+        <h1>@Model.Product.Name</h1>
+        <p class="product-price">@Model.Product.Price.ToString("N0") VND</p>
+        <p class="product-description-full">@Model.Product.Description</p>
+    </div>
+</section>

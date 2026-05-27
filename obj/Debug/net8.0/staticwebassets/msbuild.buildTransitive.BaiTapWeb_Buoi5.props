@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/BaiTapWeb_Buoi5.props" />
+</Project>
