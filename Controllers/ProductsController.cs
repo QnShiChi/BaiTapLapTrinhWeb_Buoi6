@@ -9,7 +9,10 @@ public class ProductsController : Controller
     private readonly IProductRepository _productRepository;
     private readonly ICategoryRepository _categoryRepository;
 
-    public ProductsController(IProductRepository productRepository, ICategoryRepository categoryRepository)
+    public ProductsController(
+        IProductRepository productRepository,
+        ICategoryRepository categoryRepository,
+        ISliderRepository sliderRepository)
     {
         _productRepository = productRepository;
         _categoryRepository = categoryRepository;
@@ -21,7 +24,9 @@ public class ProductsController : Controller
         {
             Products = await _productRepository.GetAllAsync(),
             Categories = await _categoryRepository.GetAllAsync(),
-            PageTitle = "Tất cả sản phẩm"
+            PageTitle = "Sản phẩm",
+            IntroTitle = "Experience Premium Shopping",
+            IntroText = "Khám phá bộ sưu tập sản phẩm tinh tế và chất lượng nhất, được tuyển chọn kỹ lưỡng dành riêng cho phong cách sống hiện đại của bạn."
         };
 
         return View(model);
@@ -41,7 +46,9 @@ public class ProductsController : Controller
             Products = await _productRepository.GetByCategoryIdAsync(categoryId),
             Categories = categories,
             SelectedCategoryId = categoryId,
-            PageTitle = $"Danh mục: {selectedCategory.Name}"
+            PageTitle = $"Danh mục: {selectedCategory.Name}",
+            IntroTitle = selectedCategory.Name,
+            IntroText = selectedCategory.Description
         };
 
         return View("Index", model);

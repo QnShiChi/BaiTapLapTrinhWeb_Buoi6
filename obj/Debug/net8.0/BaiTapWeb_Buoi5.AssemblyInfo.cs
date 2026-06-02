@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BaiTapWeb_Buoi5")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+548ef0d8a92c1f1435e5e03a249571903ecb74e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("BaiTapWeb_Buoi5")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BaiTapWeb_Buoi5")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

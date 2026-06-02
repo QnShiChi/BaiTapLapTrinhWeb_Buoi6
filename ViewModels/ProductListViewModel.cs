@@ -8,4 +8,6 @@ public class ProductListViewModel
     public IEnumerable<Category> Categories { get; set; } = [];
     public int? SelectedCategoryId { get; set; }
     public string PageTitle { get; set; } = string.Empty;
+    public string? IntroTitle { get; set; }
+    public string? IntroText { get; set; }
 }

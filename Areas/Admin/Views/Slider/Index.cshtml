@@ -1,0 +1,52 @@
+@model IEnumerable<BaiTapWeb_Buoi5.Models.SliderImage>
+@{
+    ViewData["Title"] = "Slider";
+}
+
+<section class="admin-page">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Admin</p>
+            <h1>Quản lý slider</h1>
+        </div>
+        <a asp-action="Create" class="button-primary">Thêm ảnh</a>
+    </div>
+
+    <form asp-action="UpdateOrder" method="post" class="simple-card">
+        @Html.AntiForgeryToken()
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Ảnh</th>
+                    <th>Đường dẫn</th>
+                    <th>Thứ tự</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@Url.Content($"~/{item.ImageUrl}")"
+                             alt="Slider @item.Id"
+                             style="width:180px; border-radius:12px; aspect-ratio:16 / 9; object-fit:cover;" />
+                    </td>
+                    <td>@item.ImageUrl</td>
+                    <td>
+                        <input type="number"
+                               name="displayOrders[@item.Id]"
+                               value="@item.DisplayOrder"
+                               class="form-control" />
+                    </td>
+                    <td class="admin-actions">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="button-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        <button type="submit" class="button-secondary">Cập nhật thứ tự</button>
+    </form>
+</section>

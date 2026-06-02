@@ -1,0 +1,56 @@
+@model ProductListViewModel
+@{
+    ViewData["Title"] = Model.PageTitle;
+}
+
+<section class="catalog-layout">
+    <aside class="catalog-sidebar">
+        <h2>Danh mục</h2>
+        <a class="category-pill @(Model.SelectedCategoryId is null ? "active" : string.Empty)"
+           asp-controller="Products"
+           asp-action="Index">Tất cả</a>
+        @foreach (var category in Model.Categories)
+        {
+            <a class="category-pill @(Model.SelectedCategoryId == category.Id ? "active" : string.Empty)"
+               asp-controller="Products"
+               asp-action="Category"
+               asp-route-categoryId="@category.Id">
+                @category.Name
+            </a>
+        }
+    </aside>
+
+    <section class="catalog-content">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">Storefront</p>
+                <h1>@Model.PageTitle</h1>
+            </div>
+            <p class="section-subtitle">@Model.Products.Count() sản phẩm</p>
+        </div>
+
+        <div class="product-grid">
+            @foreach (var product in Model.Products)
+            {
+                var primaryImage = product.ProductImages.FirstOrDefault(image => image.IsPrimary)?.ImageUrl
+                    ?? product.ProductImages.FirstOrDefault()?.ImageUrl
+                    ?? "https://placehold.co/600x600?text=No+Image";
+
+                <article class="product-card">
+                    <img src="@((primaryImage.StartsWith("http", StringComparison.OrdinalIgnoreCase)) ? primaryImage : Url.Content($"~/{primaryImage}"))"
+                         alt="@product.Name"
+                         class="product-card-image" />
+                    <div class="product-card-body">
+                        <p class="product-category">@product.Category?.Name</p>
+                        <h3>@product.Name</h3>
+                        <p class="product-description-preview">@product.Description</p>
+                        <div class="product-card-footer">
+                            <p class="product-price">@product.Price.ToString("N0") VND</p>
+                            <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="button-secondary">Chi tiết</a>
+                        </div>
+                    </div>
+                </article>
+            }
+        </div>
+    </section>
+</section>

@@ -1,12 +1,177 @@
+@model BaiTapWeb_Buoi5.ViewModels.HomePageViewModel
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Trang chủ";
+    var sliderImages = Model.SliderImages.ToList();
 }
 
-<section class="hero-panel">
-    <div class="hero-copy">
-        <p class="eyebrow">QLBanHang</p>
-        <h1>Khám phá sản phẩm cho bài tập thương mại điện tử buổi 6.</h1>
-        <p class="hero-text">Danh mục công khai dành cho người dùng và khu vực quản trị riêng cho Admin đều dùng chung cơ sở dữ liệu SQL Server với ASP.NET Core Identity.</p>
-        <a asp-controller="Products" asp-action="Index" class="button-primary">Xem sản phẩm</a>
-    </div>
+<section class="home-page">
+    <section class="hero-carousel">
+        <div class="hero-copy-panel">
+            <p class="eyebrow">Lumina Retail</p>
+            <h1>@Model.PageTitle</h1>
+            <p class="hero-text">Khám phá những lựa chọn được tuyển chọn kỹ lưỡng cho công nghệ, phong cách và trải nghiệm sống tinh gọn.</p>
+            <a asp-controller="Products" asp-action="Index" class="button-primary hero-cta">Mua sắm ngay</a>
+        </div>
+
+        <div class="hero-slider-stage" data-hero-slider>
+            @if (sliderImages.Count == 0)
+            {
+                <div class="hero-slide hero-slide-empty">
+                    <div class="hero-empty-state">
+                        <p class="eyebrow">Slider</p>
+                        <h2>Chưa có ảnh slider</h2>
+                        <p>Admin có thể thêm ảnh tại khu vực quản lý slider để hoàn thiện carousel.</p>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="hero-slider-track">
+                    @for (var i = 0; i < sliderImages.Count; i++)
+                    {
+                        var slide = sliderImages[i];
+                        <div class="hero-slide @(i == 0 ? "is-active" : string.Empty)">
+                            <img src="@Url.Content($"~/{slide.ImageUrl}")"
+                                 alt="Slider @(i + 1)"
+                                 class="hero-slide-image" />
+                        </div>
+                    }
+                </div>
+                <div class="hero-slider-dots" aria-hidden="true">
+                    @for (var i = 0; i < sliderImages.Count; i++)
+                    {
+                        <span class="hero-dot @(i == 0 ? "is-active" : string.Empty)"></span>
+                    }
+                </div>
+            }
+        </div>
+    </section>
+
+    <section class="benefits-grid">
+        <article class="benefit-card">
+            <div class="benefit-icon">01</div>
+            <h3>Giao hàng nhanh</h3>
+            <p>Trải nghiệm đóng gói chỉn chu và giao nhận đúng hẹn cho từng đơn hàng.</p>
+        </article>
+        <article class="benefit-card">
+            <div class="benefit-icon">02</div>
+            <h3>Bảo hành chính hãng</h3>
+            <p>Cam kết minh bạch về nguồn gốc và hỗ trợ sau mua rõ ràng.</p>
+        </article>
+        <article class="benefit-card">
+            <div class="benefit-icon">03</div>
+            <h3>Hỗ trợ 24/7</h3>
+            <p>Đội ngũ luôn sẵn sàng tư vấn khi bạn cần chọn mua hoặc xử lý sự cố.</p>
+        </article>
+    </section>
+
+    <section class="section-stack">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">Danh mục nổi bật</p>
+                <h1>Khám phá theo nhu cầu</h1>
+            </div>
+        </div>
+
+        <div class="category-feature-grid">
+            @foreach (var category in Model.Categories.Take(4))
+            {
+                var categoryProduct = Model.LatestProducts.FirstOrDefault(product => product.CategoryId == category.Id);
+                var categoryImage = categoryProduct?.ProductImages.FirstOrDefault(image => image.IsPrimary)?.ImageUrl
+                    ?? categoryProduct?.ProductImages.FirstOrDefault()?.ImageUrl
+                    ?? "https://placehold.co/900x900/f0edef/1b1b1d?text=QLBanHang";
+                <a asp-controller="Products"
+                   asp-action="Category"
+                   asp-route-categoryId="@category.Id"
+                   class="category-feature-card">
+                    <img src="@((categoryImage.StartsWith("http", StringComparison.OrdinalIgnoreCase)) ? categoryImage : Url.Content($"~/{categoryImage}"))"
+                         alt="@category.Name"
+                         class="category-feature-image" />
+                    <div class="category-feature-overlay">
+                        <p>@category.Name</p>
+                        <span>Xem ngay</span>
+                    </div>
+                </a>
+            }
+        </div>
+    </section>
+
+    <section class="section-stack">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">Sản phẩm mới</p>
+                <h1>Lựa chọn mới nhất</h1>
+            </div>
+            <p class="section-subtitle">@Model.LatestProducts.Count() sản phẩm</p>
+        </div>
+
+        <div class="product-grid product-grid-home">
+            @foreach (var product in Model.LatestProducts)
+            {
+                var primaryImage = product.ProductImages.FirstOrDefault(image => image.IsPrimary)?.ImageUrl
+                    ?? product.ProductImages.FirstOrDefault()?.ImageUrl
+                    ?? "https://placehold.co/600x600/f0edef/1b1b1d?text=QLBanHang";
+
+                <article class="product-card product-card-home">
+                    <span class="product-badge">New</span>
+                    <img src="@((primaryImage.StartsWith("http", StringComparison.OrdinalIgnoreCase)) ? primaryImage : Url.Content($"~/{primaryImage}"))"
+                         alt="@product.Name"
+                         class="product-card-image" />
+                    <div class="product-card-body">
+                        <p class="product-category">@product.Category?.Name</p>
+                        <h3>@product.Name</h3>
+                        <p class="product-description-preview">@product.Description</p>
+                        <div class="product-card-footer">
+                            <p class="product-price">@product.Price.ToString("N0") VND</p>
+                            <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="button-secondary">Chi tiết</a>
+                        </div>
+                    </div>
+                </article>
+            }
+        </div>
+    </section>
+
+    <section class="promo-banner">
+        <div class="promo-copy">
+            <p class="eyebrow">Ưu đãi đặc biệt</p>
+            <h1>Giảm giá cho những lựa chọn được yêu thích</h1>
+            <p class="hero-text">Không gian mua sắm mới được tổ chức để nổi bật hình ảnh sản phẩm, nhịp điệu nội dung và các điểm chạm thương mại quan trọng.</p>
+        </div>
+    </section>
+
+    <section class="newsletter-card">
+        <div>
+            <p class="eyebrow">Newsletter</p>
+            <h1>Đăng ký nhận tin</h1>
+            <p class="hero-text">Nhận thông tin về bộ sưu tập mới, ưu đãi theo mùa và những lựa chọn nổi bật được tuyển chọn mỗi tuần.</p>
+        </div>
+        <form class="newsletter-form">
+            <input type="email" class="form-control" placeholder="Địa chỉ email của bạn" />
+            <button type="button" class="button-primary">Đăng ký</button>
+        </form>
+    </section>
 </section>
+
+@section Scripts {
+    <script>
+        (() => {
+            const slider = document.querySelector('[data-hero-slider]');
+            if (!slider) return;
+
+            const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+            const dots = Array.from(slider.querySelectorAll('.hero-dot'));
+            if (slides.length <= 1) return;
+
+            let currentIndex = 0;
+            const activate = (index) => {
+                slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+                dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+            };
+
+            window.setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                activate(currentIndex);
+            }, 4500);
+        })();
+    </script>
+}

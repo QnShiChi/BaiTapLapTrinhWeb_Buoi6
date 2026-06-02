@@ -1072,5 +1072,101 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\products\2f2458e9-b2db-4164-ad64-936f89f88dc3_avata-rượuchuối-hột.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>BaiTapWeb_Buoi5</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BaiTapWeb_Buoi5</BasePath>
+      <RelativePath>uploads/products/2f2458e9-b2db-4164-ad64-936f89f88dc3_avata-rượuchuối-hột.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\products\2f2458e9-b2db-4164-ad64-936f89f88dc3_avata-rượuchuối-hột.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\products\69fb2748-32ab-4d18-b32e-d4befdc7626e_6-lon-bia-viet-330ml-202407101630590785.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>BaiTapWeb_Buoi5</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BaiTapWeb_Buoi5</BasePath>
+      <RelativePath>uploads/products/69fb2748-32ab-4d18-b32e-d4befdc7626e_6-lon-bia-viet-330ml-202407101630590785.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\products\69fb2748-32ab-4d18-b32e-d4befdc7626e_6-lon-bia-viet-330ml-202407101630590785.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\products\843baff6-db81-483b-898f-b6bd3ee6d08b_Screenshot from 2026-05-28 09-27-49.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>BaiTapWeb_Buoi5</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BaiTapWeb_Buoi5</BasePath>
+      <RelativePath>uploads/products/843baff6-db81-483b-898f-b6bd3ee6d08b_Screenshot from 2026-05-28 09-27-49.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\products\843baff6-db81-483b-898f-b6bd3ee6d08b_Screenshot from 2026-05-28 09-27-49.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\26f085a4-4218-41ec-a4dd-ca221ac22385_slider-1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>BaiTapWeb_Buoi5</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BaiTapWeb_Buoi5</BasePath>
+      <RelativePath>uploads/sliders/26f085a4-4218-41ec-a4dd-ca221ac22385_slider-1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\26f085a4-4218-41ec-a4dd-ca221ac22385_slider-1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\29c82f88-f65f-412d-945f-aa0a04f423c5_slider-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>BaiTapWeb_Buoi5</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BaiTapWeb_Buoi5</BasePath>
+      <RelativePath>uploads/sliders/29c82f88-f65f-412d-945f-aa0a04f423c5_slider-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\29c82f88-f65f-412d-945f-aa0a04f423c5_slider-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\2b11dab3-3849-479b-aef4-b59b4c2c481b_Thu-tuc-mo-cua-hang-ban-ruou.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>BaiTapWeb_Buoi5</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BaiTapWeb_Buoi5</BasePath>
+      <RelativePath>uploads/sliders/2b11dab3-3849-479b-aef4-b59b4c2c481b_Thu-tuc-mo-cua-hang-ban-ruou.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\2b11dab3-3849-479b-aef4-b59b4c2c481b_Thu-tuc-mo-cua-hang-ban-ruou.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

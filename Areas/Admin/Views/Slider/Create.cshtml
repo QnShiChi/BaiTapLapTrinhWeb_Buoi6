@@ -1,0 +1,38 @@
+@model BaiTapWeb_Buoi5.ViewModels.SliderFormViewModel
+@{
+    ViewData["Title"] = "Thêm ảnh slider";
+}
+
+<section class="form-page">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Admin</p>
+            <h1>Thêm ảnh slider</h1>
+        </div>
+    </div>
+
+    <div class="form-card">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="ImageFile"></label>
+                <input asp-for="ImageFile" class="form-control" type="file" accept="image/*" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DisplayOrder"></label>
+                <input asp-for="DisplayOrder" class="form-control" />
+                <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="button-primary">Lưu ảnh</button>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,22 @@
+@model BaiTapWeb_Buoi5.Models.SliderImage
+@{
+    ViewData["Title"] = "Xóa ảnh slider";
+}
+
+<section class="detail-page">
+    <div class="detail-card danger-card">
+        <p class="eyebrow">Admin</p>
+        <h1>Xóa ảnh slider</h1>
+        <p>Bạn có chắc muốn xóa ảnh slider này không?</p>
+
+        <img src="@Url.Content($"~/{Model.ImageUrl}")"
+             alt="Slider @Model.Id"
+             style="width:min(100%, 420px); border-radius:16px; aspect-ratio:16 / 9; object-fit:cover;" />
+
+        <form asp-action="Delete" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="button-danger">Xóa</button>
+        </form>
+    </div>
+</section>

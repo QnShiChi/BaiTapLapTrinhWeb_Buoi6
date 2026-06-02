@@ -1,0 +1,46 @@
+@page
+@model BaiTapWeb_Buoi5.Areas.Identity.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<section class="auth-shell">
+    <div class="auth-card auth-card-login">
+        <p class="eyebrow">Đăng nhập</p>
+        <h1>Chào mừng quay lại</h1>
+        <p class="auth-intro">Nhập email và mật khẩu để tiếp tục sử dụng hệ thống.</p>
+
+        <form method="post" class="auth-form auth-form-compact">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+            <div class="auth-field">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control auth-input" placeholder="admin@qlbanhang.local" autocomplete="email" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            <div class="auth-field">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control auth-input" placeholder="Nhập mật khẩu" autocomplete="current-password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+
+            <label asp-for="Input.RememberMe" class="auth-checkbox">
+                <input asp-for="Input.RememberMe" />
+                <span>@Html.DisplayNameFor(model => model.Input.RememberMe)</span>
+            </label>
+
+            <button type="submit" class="button-primary auth-button">Đăng nhập</button>
+
+            <p class="auth-meta">
+                Chưa có tài khoản?
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Tạo tài khoản</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

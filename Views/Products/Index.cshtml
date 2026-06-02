@@ -1,42 +1,74 @@
 @model ProductListViewModel
 @{
     ViewData["Title"] = Model.PageTitle;
+    var introTitle = Model.IntroTitle ?? Model.PageTitle;
+    var introText = string.IsNullOrWhiteSpace(Model.IntroText)
+        ? "Khám phá bộ sưu tập sản phẩm tinh tế và chất lượng nhất, được tuyển chọn kỹ lưỡng dành riêng cho phong cách sống hiện đại của bạn."
+        : Model.IntroText;
 }
 
-<section class="catalog-layout">
-    <aside class="catalog-sidebar">
-        <h2>Danh mục</h2>
-        <a class="category-pill @(Model.SelectedCategoryId is null ? "active" : string.Empty)"
-           asp-controller="Products"
-           asp-action="Index">Tất cả</a>
-        @foreach (var category in Model.Categories)
-        {
-            <a class="category-pill @(Model.SelectedCategoryId == category.Id ? "active" : string.Empty)"
-               asp-controller="Products"
-               asp-action="Category"
-               asp-route-categoryId="@category.Id">
-                @category.Name
-            </a>
-        }
+<section class="catalog-hero">
+    <div class="catalog-hero-copy">
+        <p class="eyebrow">Lumina Retail</p>
+        <h1>@introTitle</h1>
+        <p class="hero-text">@introText</p>
+        <div class="catalog-hero-actions">
+            <a asp-controller="Products" asp-action="Index" class="button-primary">Mua sắm ngay</a>
+            <a asp-controller="Home" asp-action="Index" class="button-secondary">Về trang chủ</a>
+        </div>
+    </div>
+</section>
+
+<section class="catalog-layout catalog-layout-premium">
+    <aside class="catalog-sidebar premium-sidebar">
+        <div class="catalog-sidebar-panel">
+            <h2>Danh mục</h2>
+            <div class="category-pill-list">
+                <a class="category-pill @(Model.SelectedCategoryId is null ? "active" : string.Empty)"
+                   asp-controller="Products"
+                   asp-action="Index">
+                    Tất cả sản phẩm
+                </a>
+                @foreach (var category in Model.Categories)
+                {
+                    <a class="category-pill @(Model.SelectedCategoryId == category.Id ? "active" : string.Empty)"
+                       asp-controller="Products"
+                       asp-action="Category"
+                       asp-route-categoryId="@category.Id">
+                        @category.Name
+                    </a>
+                }
+            </div>
+        </div>
+
+        <div class="price-filter-card">
+            <p class="eyebrow">Price range</p>
+            <input type="range" min="0" max="20000000" value="10000000" class="catalog-range" />
+            <div class="price-range-meta">
+                <span>0đ</span>
+                <span>20.000.000đ+</span>
+            </div>
+        </div>
     </aside>
 
     <section class="catalog-content">
-        <div class="section-header">
-            <div>
-                <p class="eyebrow">Storefront</p>
-                <h1>@Model.PageTitle</h1>
+        <div class="catalog-toolbar">
+            <p class="section-subtitle">Hiển thị @Model.Products.Count() sản phẩm</p>
+            <div class="catalog-view-actions">
+                <button type="button" class="catalog-view-button is-active" aria-label="Xem dạng lưới">▦</button>
+                <button type="button" class="catalog-view-button" aria-label="Xem dạng danh sách">☰</button>
             </div>
-            <p class="section-subtitle">@Model.Products.Count() sản phẩm</p>
         </div>
 
-        <div class="product-grid">
+        <div class="product-grid catalog-product-grid">
             @foreach (var product in Model.Products)
             {
                 var primaryImage = product.ProductImages.FirstOrDefault(image => image.IsPrimary)?.ImageUrl
                     ?? product.ProductImages.FirstOrDefault()?.ImageUrl
-                    ?? "https://placehold.co/600x600?text=No+Image";
+                    ?? "https://placehold.co/600x600/f0edef/1b1b1d?text=QLBanHang";
 
-                <article class="product-card">
+                <article class="product-card product-card-home">
+                    <span class="product-badge">New</span>
                     <img src="@((primaryImage.StartsWith("http", StringComparison.OrdinalIgnoreCase)) ? primaryImage : Url.Content($"~/{primaryImage}"))"
                          alt="@product.Name"
                          class="product-card-image" />
@@ -45,12 +77,19 @@
                         <h3>@product.Name</h3>
                         <p class="product-description-preview">@product.Description</p>
                         <div class="product-card-footer">
-                            <p class="product-price">@product.Price.ToString("N0") VND</p>
-                            <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="button-secondary">Chi tiết</a>
+                            <p class="product-price">@product.Price.ToString("N0")đ</p>
+                            <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="button-primary">Chi tiết</a>
                         </div>
                     </div>
                 </article>
             }
+        </div>
+
+        <div class="catalog-pagination" aria-label="Pagination">
+            <span class="catalog-page-button">1</span>
+            <span class="catalog-page-button is-active">2</span>
+            <span class="catalog-page-button">3</span>
+            <span class="catalog-page-button">›</span>
         </div>
     </section>
 </section>

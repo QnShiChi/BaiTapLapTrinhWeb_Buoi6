@@ -1,29 +1,175 @@
 @model ProductDetailsViewModel
 @{
     ViewData["Title"] = Model.Product.Name;
-    var primaryImage = Model.Product.ProductImages.FirstOrDefault(image => image.IsPrimary)?.ImageUrl
-        ?? Model.Product.ProductImages.FirstOrDefault()?.ImageUrl;
+    var placeholderImage = "https://placehold.co/900x900/f0edef/1b1b1d?text=QLBanHang";
+    var galleryImages = Model.Product.ProductImages
+        .Select(image => image.ImageUrl)
+        .Where(imageUrl => !string.IsNullOrWhiteSpace(imageUrl))
+        .ToList();
+
+    if (galleryImages.Count == 0)
+    {
+        galleryImages.Add(placeholderImage);
+    }
+
+    while (galleryImages.Count < 4)
+    {
+        galleryImages.Add(galleryImages.Last());
+    }
+
+    string ResolveImage(string imageUrl)
+    {
+        return imageUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase)
+            ? imageUrl
+            : Url.Content($"~/{imageUrl}");
+    }
+
+    var heroImage = ResolveImage(galleryImages[0]);
+    var storyImage = ResolveImage(galleryImages.Count > 1 ? galleryImages[1] : galleryImages[0]);
+    var previousPrice = Model.Product.Price * 1.2m;
+    var relatedProducts = new[]
+    {
+        new { Label = "Minimalist", Name = "Obsidian Noir 40mm", Price = "8.200.000đ", Image = ResolveImage(galleryImages[0]) },
+        new { Label = "Sport", Name = "Ocean Deep 200m", Price = "15.500.000đ", Image = ResolveImage(galleryImages[1]) },
+        new { Label = "Heritage", Name = "Grand Heritage Gold", Price = "24.000.000đ", Image = ResolveImage(galleryImages[2]) },
+        new { Label = "Tech", Name = "Quantum Smart Pro", Price = "11.900.000đ", Image = ResolveImage(galleryImages[3]) }
+    };
 }
 
-<section class="product-detail">
-    <div class="product-gallery">
-        @if (!string.IsNullOrWhiteSpace(primaryImage))
-        {
-            <img src="~/@primaryImage" alt="@Model.Product.Name" class="product-detail-primary-image" />
-        }
+<section class="product-detail-page">
+    <nav class="product-breadcrumb" aria-label="Breadcrumb">
+        <a asp-controller="Home" asp-action="Index">Trang chủ</a>
+        <span>›</span>
+        <a asp-controller="Products" asp-action="Index">Sản phẩm</a>
+        <span>›</span>
+        <strong>@Model.Product.Name</strong>
+    </nav>
 
-        <div class="product-thumbnail-grid">
-            @foreach (var image in Model.Product.ProductImages)
+    <section class="product-detail-hero">
+        <div class="product-gallery-shell">
+            <div class="product-gallery-main">
+                <span class="product-status-badge">New Arrival</span>
+                <img src="@heroImage"
+                     alt="@Model.Product.Name"
+                     class="product-detail-primary-image"
+                     data-detail-main-image />
+            </div>
+
+            <div class="product-thumbnail-grid product-thumbnail-grid-rich">
+                @for (var i = 0; i < galleryImages.Count; i++)
+                {
+                    var thumbnailUrl = ResolveImage(galleryImages[i]);
+                    <button type="button"
+                            class="product-thumbnail-button @(i == 0 ? "is-active" : string.Empty)"
+                            data-detail-thumbnail
+                            data-image-src="@thumbnailUrl"
+                            aria-label="Ảnh @(i + 1) của @Model.Product.Name">
+                        <img src="@thumbnailUrl" alt="@Model.Product.Name" class="product-thumbnail" />
+                    </button>
+                }
+            </div>
+        </div>
+
+        <aside class="product-detail-panel">
+            <p class="eyebrow">@Model.Product.Category?.Name</p>
+            <h1>@Model.Product.Name</h1>
+            <div class="product-rating-row">
+                <span class="product-rating-stars">★★★★★</span>
+                <span class="product-rating-meta">(128 nhận xét)</span>
+            </div>
+
+            <div class="product-price-row">
+                <p class="product-price product-price-featured">@Model.Product.Price.ToString("N0")đ</p>
+                <p class="product-price-old">@previousPrice.ToString("N0")đ</p>
+            </div>
+
+            <section class="product-detail-card">
+                <h2>Thông tin chi tiết</h2>
+                <p>@Model.Product.Description</p>
+            </section>
+
+            <div class="product-option-row">
+                <span class="product-option-label">Màu sắc:</span>
+                <div class="product-color-swatches" aria-hidden="true">
+                    <span class="product-color-swatch is-active" style="--swatch-color:#1b1b1d;"></span>
+                    <span class="product-color-swatch" style="--swatch-color:#d4dde7;"></span>
+                    <span class="product-color-swatch" style="--swatch-color:#f4d770;"></span>
+                </div>
+            </div>
+
+            <div class="product-option-row">
+                <span class="product-option-label">Số lượng:</span>
+                <div class="product-quantity-stepper" aria-hidden="true">
+                    <button type="button">−</button>
+                    <span>1</span>
+                    <button type="button">+</button>
+                </div>
+            </div>
+
+            <div class="product-detail-actions">
+                <button type="button" class="button-secondary product-action-secondary">Thêm vào giỏ</button>
+                <button type="button" class="button-primary product-action-primary">Mua ngay</button>
+            </div>
+        </aside>
+    </section>
+
+    <section class="product-story-section">
+        <div class="product-story-copy">
+            <h2>Đẳng cấp trong từng chuyển động</h2>
+            <p>Mỗi sản phẩm được tuyển chọn để cân bằng giữa thiết kế, tính ứng dụng và cảm giác sở hữu cao cấp. Từ chất liệu hoàn thiện đến khả năng sử dụng hằng ngày, mọi chi tiết đều hướng tới một trải nghiệm gọn gàng và tinh tế hơn.</p>
+            <ul class="product-story-points">
+                <li>Bảo hành toàn cầu 5 năm chính hãng.</li>
+                <li>Miễn phí thay pin và bảo dưỡng trọn đời.</li>
+                <li>Hộp đựng cao cấp đi kèm cho từng sản phẩm.</li>
+            </ul>
+        </div>
+        <div class="product-story-visual">
+            <img src="@storyImage" alt="@Model.Product.Name" class="product-story-image" />
+        </div>
+    </section>
+
+    <section class="related-products-section">
+        <div class="section-header">
+            <div>
+                <h1>Sản phẩm tương tự</h1>
+                <p class="section-subtitle">Có thể bạn cũng sẽ yêu thích những mẫu này</p>
+            </div>
+            <a asp-controller="Products" asp-action="Index" class="related-products-link">Xem tất cả</a>
+        </div>
+
+        <div class="product-grid related-products-grid">
+            @foreach (var item in relatedProducts)
             {
-                <img src="~/@image.ImageUrl" alt="@Model.Product.Name" class="product-thumbnail" />
+                <article class="product-card related-product-card">
+                    <img src="@item.Image" alt="@item.Name" class="product-card-image" />
+                    <div class="product-card-body">
+                        <p class="product-category">@item.Label</p>
+                        <h3>@item.Name</h3>
+                        <p class="product-price related-product-price">@item.Price</p>
+                    </div>
+                </article>
             }
         </div>
-    </div>
-
-    <div class="product-info-card">
-        <p class="eyebrow">@Model.Product.Category?.Name</p>
-        <h1>@Model.Product.Name</h1>
-        <p class="product-price">@Model.Product.Price.ToString("N0") VND</p>
-        <p class="product-description-full">@Model.Product.Description</p>
-    </div>
+    </section>
 </section>
+
+@section Scripts {
+    <script>
+        (() => {
+            const mainImage = document.querySelector('[data-detail-main-image]');
+            const thumbnails = Array.from(document.querySelectorAll('[data-detail-thumbnail]'));
+            if (!mainImage || thumbnails.length === 0) return;
+
+            thumbnails.forEach((thumbnail) => {
+                thumbnail.addEventListener('click', () => {
+                    const imageSrc = thumbnail.getAttribute('data-image-src');
+                    if (!imageSrc) return;
+
+                    mainImage.setAttribute('src', imageSrc);
+                    thumbnails.forEach((item) => item.classList.remove('is-active'));
+                    thumbnail.classList.add('is-active');
+                });
+            });
+        })();
+    </script>
+}

@@ -4,42 +4,62 @@
     ViewData["Title"] = "Đăng ký";
 }
 
-<section class="auth-card">
-    <h1>Tạo tài khoản</h1>
-    <form method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="Input.UserName"></label>
-            <input asp-for="Input.UserName" class="form-control" />
-            <span asp-validation-for="Input.UserName" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Input.FullName"></label>
-            <input asp-for="Input.FullName" class="form-control" />
-            <span asp-validation-for="Input.FullName" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Input.Address"></label>
-            <input asp-for="Input.Address" class="form-control" />
-            <span asp-validation-for="Input.Address" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Input.Email"></label>
-            <input asp-for="Input.Email" class="form-control" />
-            <span asp-validation-for="Input.Email" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Input.Password"></label>
-            <input asp-for="Input.Password" class="form-control" />
-            <span asp-validation-for="Input.Password" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Input.ConfirmPassword"></label>
-            <input asp-for="Input.ConfirmPassword" class="form-control" />
-            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-        </div>
-        <button type="submit" class="button-primary">Đăng ký</button>
-    </form>
+<section class="auth-shell">
+    <div class="auth-card auth-card-register">
+        <p class="eyebrow">Tạo tài khoản</p>
+        <h1>Bắt đầu với tài khoản mới</h1>
+        <p class="auth-intro">Điền đầy đủ thông tin bên dưới để tạo tài khoản thành viên.</p>
+
+        <form method="post" class="auth-form">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+            <div class="auth-grid">
+                <div class="auth-field">
+                    <label asp-for="Input.UserName"></label>
+                    <input asp-for="Input.UserName" class="form-control auth-input" placeholder="Nhập tên đăng nhập" autocomplete="username" />
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+
+                <div class="auth-field">
+                    <label asp-for="Input.Email"></label>
+                    <input asp-for="Input.Email" class="form-control auth-input" placeholder="example@email.com" autocomplete="email" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="auth-field">
+                    <label asp-for="Input.FullName"></label>
+                    <input asp-for="Input.FullName" class="form-control auth-input" placeholder="Nhập họ và tên" autocomplete="name" />
+                    <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                </div>
+
+                <div class="auth-field">
+                    <label asp-for="Input.Address"></label>
+                    <input asp-for="Input.Address" class="form-control auth-input" placeholder="Nhập địa chỉ của bạn" autocomplete="street-address" />
+                    <span asp-validation-for="Input.Address" class="text-danger"></span>
+                </div>
+
+                <div class="auth-field">
+                    <label asp-for="Input.Password"></label>
+                    <input asp-for="Input.Password" class="form-control auth-input" placeholder="Tạo mật khẩu" autocomplete="new-password" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <div class="auth-field">
+                    <label asp-for="Input.ConfirmPassword"></label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control auth-input" placeholder="Nhập lại mật khẩu" autocomplete="new-password" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="button-primary auth-button">Đăng ký</button>
+
+            <p class="auth-meta">
+                Đã có tài khoản?
+                <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Đăng nhập</a>
+            </p>
+        </form>
+    </div>
 </section>
 
 @section Scripts {

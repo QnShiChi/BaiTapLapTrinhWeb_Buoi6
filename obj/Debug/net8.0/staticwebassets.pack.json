@@ -269,6 +269,30 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/uploads/products/2f2458e9-b2db-4164-ad64-936f89f88dc3_avata-rượuchuối-hột.jpg",
+      "PackagePath": "staticwebassets/uploads/products/2f2458e9-b2db-4164-ad64-936f89f88dc3_avata-rượuchuối-hột.jpg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/uploads/products/69fb2748-32ab-4d18-b32e-d4befdc7626e_6-lon-bia-viet-330ml-202407101630590785.jpg",
+      "PackagePath": "staticwebassets/uploads/products/69fb2748-32ab-4d18-b32e-d4befdc7626e_6-lon-bia-viet-330ml-202407101630590785.jpg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/uploads/products/843baff6-db81-483b-898f-b6bd3ee6d08b_Screenshot from 2026-05-28 09-27-49.png",
+      "PackagePath": "staticwebassets/uploads/products/843baff6-db81-483b-898f-b6bd3ee6d08b_Screenshot from 2026-05-28 09-27-49.png"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/uploads/sliders/26f085a4-4218-41ec-a4dd-ca221ac22385_slider-1.jpg",
+      "PackagePath": "staticwebassets/uploads/sliders/26f085a4-4218-41ec-a4dd-ca221ac22385_slider-1.jpg"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/uploads/sliders/29c82f88-f65f-412d-945f-aa0a04f423c5_slider-3.webp",
+      "PackagePath": "staticwebassets/uploads/sliders/29c82f88-f65f-412d-945f-aa0a04f423c5_slider-3.webp"
+    },
+    {
+      "Id": "/home/phan-duong-quoc-nhat/HocTap/LapTrinhWeb/WebVeNha_Buoi6/wwwroot/uploads/sliders/2b11dab3-3849-479b-aef4-b59b4c2c481b_Thu-tuc-mo-cua-hang-ban-ruou.jpg",
+      "PackagePath": "staticwebassets/uploads/sliders/2b11dab3-3849-479b-aef4-b59b4c2c481b_Thu-tuc-mo-cua-hang-ban-ruou.jpg"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BaiTapWeb_Buoi5.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

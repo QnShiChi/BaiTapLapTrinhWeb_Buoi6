@@ -10,13 +10,19 @@
 <body>
     <header class="top-nav">
         <div class="container-shell nav-shell">
-            <a class="brand-link" asp-area="" asp-controller="Products" asp-action="Index">QLBanHang</a>
+            <a class="brand-link" asp-area="" asp-controller="Home" asp-action="Index">QLBanHang</a>
             <nav class="primary-nav">
+                <a asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
                 <a asp-area="" asp-controller="Products" asp-action="Index">Sản phẩm</a>
                 <a asp-area="" asp-controller="Category" asp-action="Index">Danh mục</a>
                 <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </nav>
-            <partial name="_LoginPartial" />
+            <div class="nav-utilities">
+                <form class="nav-search" asp-area="" asp-controller="Products" asp-action="Index" method="get">
+                    <input type="search" name="q" placeholder="Tìm kiếm sản phẩm..." />
+                </form>
+                <partial name="_LoginPartial" />
+            </div>
         </div>
     </header>
 
@@ -25,9 +31,20 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container-shell footer-shell">
-            <span>&copy; 2026 - QLBanHang</span>
-            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container-shell footer-shell footer-shell-rich">
+            <div class="footer-brand-block">
+                <a class="brand-link" asp-area="" asp-controller="Home" asp-action="Index">QLBanHang</a>
+                <p>Không gian mua sắm chọn lọc cho công nghệ, phong cách và trải nghiệm sống hiện đại.</p>
+            </div>
+            <div class="footer-links">
+                <a asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                <a asp-area="" asp-controller="Products" asp-action="Index">Sản phẩm</a>
+                <a asp-area="" asp-controller="Category" asp-action="Index">Danh mục</a>
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+            <div class="footer-meta">
+                <span>&copy; 2026 - QLBanHang</span>
+            </div>
         </div>
     </footer>
 
